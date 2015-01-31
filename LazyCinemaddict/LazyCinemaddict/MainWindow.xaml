@@ -1,0 +1,8 @@
+﻿<Window x:Class="LazyCinemaddict.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="NewFilm" Height="300" Width="300" Closed="Window_Closed" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Button Content="Text" Click="Button_Click"/>
+    </Grid>
+</Window>
