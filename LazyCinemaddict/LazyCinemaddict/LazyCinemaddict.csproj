@@ -58,15 +58,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DefaultSaver.cs" />
     <Compile Include="Film.cs" />
+    <Compile Include="FilmInfoRepository.cs" />
+    <Compile Include="FilmInfoViewModel.cs" />
+    <Compile Include="ISaver.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sample4.xaml.cs">
       <DependentUpon>Sample4.xaml</DependentUpon>
     </Compile>
+    <Compile Include="JsonSaver.cs" />
     <Compile Include="WorkWithFile.cs" />
-    <Page Include="AddNewFilm.xaml">
+    <Page Include="FilmEditorWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -75,8 +80,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="FilmInfo.cs" />
-    <Compile Include="AddNewFilm.xaml.cs">
-      <DependentUpon>AddNewFilm.xaml</DependentUpon>
+    <Compile Include="FilmEditorWindow.xaml.cs">
+      <DependentUpon>FilmEditorWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MainWindow.xaml">

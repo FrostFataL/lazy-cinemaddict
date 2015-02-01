@@ -4,35 +4,49 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace LazyCinemaddict
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
-    public partial class AddNewFilm : Window, INotifyPropertyChanged
+    public class FilmInfoViewModel : INotifyPropertyChanged
     {
-        WorkWithFile wwf;
+        Guid id;
+        public Guid Id
+        {
+            get
+            {
+                return id;
+            }
+            set
+            {
+                id = value;
+                OnPropertyChanged("Id");
+            }
+        }
 
-        string title;
+        string windowTitle;
+        public string WindowTitle
+        {
+            get
+            {
+                return windowTitle;
+            }
+            set
+            {
+                windowTitle = value;
+                OnPropertyChanged("WindowTitle");
+            }
+        }
+
+        string filmTitle;
         public string FilmTitle
         {
             get
             {
-                return title;
+                return filmTitle;
             }
             set
             {
-                title = value;
+                filmTitle = value;
                 OnPropertyChanged("FilmTitle");
             }
         }
@@ -79,26 +93,7 @@ namespace LazyCinemaddict
             }
         }
 
-        public AddNewFilm(WorkWithFile file)
-        {
-            InitializeComponent();
-            wwf = file;
-        }
-
-        private void Test_btn_Click(object sender, RoutedEventArgs e)
-        {
-            FilmInfo info = new FilmInfo { Title = this.FilmTitle, Date = this.Date, Genre = this.Genre, Duration = this.Duration };
-            wwf.AddNewFilm(info);
-            this.Close();
-        }
-
-        private void WriteFile(object sender, EventArgs e)
-        {
-            wwf.WriteToFile();
-        }
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         private void OnPropertyChanged(String info)
         {
             if (PropertyChanged != null)

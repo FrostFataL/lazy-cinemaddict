@@ -19,26 +19,51 @@ namespace LazyCinemaddict
     /// </summary>
     public partial class MainWindow : Window
     {
-        private WorkWithFile qwe;
+        private FilmInfoRepository repo;
 
         public MainWindow()
         {
             InitializeComponent();
-            qwe = new WorkWithFile();
+            repo = new FilmInfoRepository();
+            repo.Saver = new JsonSaver("Films");
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            AddNewFilm film = new AddNewFilm(qwe);
-            //this.Hide();
+            FilmEditorWindow film = new FilmEditorWindow();
             film.Owner = this;
-            film.ShowDialog();
-            //this.Show();
+            if (film.ShowDialog() == true)
+            {
+                repo.Add(new FilmInfo()
+                { 
+                    Genre = film.FilmInfo.Genre,
+                    Date = film.FilmInfo.Date,
+                    Duration = film.FilmInfo.Duration,
+                    Title = film.FilmInfo.FilmTitle
+                });
+            }
         }
 
         private void Window_Closed(object sender, EventArgs e)
         {
+            repo.Save();
             this.Close();
+        }
+
+        private void UpdateFilm_Click(object sender, RoutedEventArgs e)
+        {
+            var q = repo.GetAll().FirstOrDefault();
+            FilmEditorWindow film = new FilmEditorWindow(q);
+            film.Owner = this;
+            if (film.ShowDialog() == true)
+            {
+                q.Title = film.FilmInfo.FilmTitle;
+                q.Date = film.FilmInfo.Date;
+                q.Genre = film.FilmInfo.Genre;
+                q.Duration = film.FilmInfo.Duration;
+
+                //repo.Update(q);
+            }
         }
     }
 }

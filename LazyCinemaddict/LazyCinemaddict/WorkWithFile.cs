@@ -45,11 +45,6 @@ namespace LazyCinemaddict
             StreamWriter sw = new StreamWriter("Films");
             var jsonFilms = JsonConvert.SerializeObject(film_lst);
             sw.WriteLine(jsonFilms);
-            //foreach (FilmInfo f in film_lst)
-            //{
-            //    var jsonFilm = JsonConvert.SerializeObject(f);
-            //    
-            //}
             sw.Close();
         }
 
