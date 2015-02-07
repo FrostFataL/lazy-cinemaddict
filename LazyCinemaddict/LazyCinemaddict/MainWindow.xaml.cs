@@ -28,22 +28,6 @@ namespace LazyCinemaddict
             repo.Saver = new JsonSaver("Films");
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            FilmEditorWindow film = new FilmEditorWindow();
-            film.Owner = this;
-            if (film.ShowDialog() == true)
-            {
-                repo.Add(new FilmInfo()
-                { 
-                    Genre = film.FilmInfo.Genre,
-                    Date = film.FilmInfo.Date,
-                    Duration = film.FilmInfo.Duration,
-                    Title = film.FilmInfo.FilmTitle
-                });
-            }
-        }
-
         private void Window_Closed(object sender, EventArgs e)
         {
             repo.Save();
@@ -61,8 +45,22 @@ namespace LazyCinemaddict
                 q.Date = film.FilmInfo.Date;
                 q.Genre = film.FilmInfo.Genre;
                 q.Duration = film.FilmInfo.Duration;
+            }
+        }
 
-                //repo.Update(q);
+        private void Add_Click(object sender, RoutedEventArgs e)
+        {
+            FilmEditorWindow film = new FilmEditorWindow();
+            film.Owner = this;
+            if (film.ShowDialog() == true)
+            {
+                repo.Add(new FilmInfo()
+                {
+                    Genre = film.FilmInfo.Genre,
+                    Date = film.FilmInfo.Date,
+                    Duration = film.FilmInfo.Duration,
+                    Title = film.FilmInfo.FilmTitle
+                });
             }
         }
     }

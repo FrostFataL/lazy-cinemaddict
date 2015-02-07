@@ -22,8 +22,6 @@ H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemad
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemaddict.pdb
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\bin\Debug\LazyCinemaddict.exe
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\bin\Debug\LazyCinemaddict.pdb
-H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\bin\Debug\Newtonsoft.Json.dll
-H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\bin\Debug\Newtonsoft.Json.xml
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\MainWindow.baml
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\Sample4.baml
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\MainWindow.g.cs
@@ -35,4 +33,6 @@ H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemad
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemaddict.csproj.GenerateResource.Cache
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\FilmEditorWindow.baml
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\FilmEditorWindow.g.cs
+H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\bin\Debug\Newtonsoft.Json.dll
+H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\bin\Debug\Newtonsoft.Json.xml
 H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemaddict.csprojResolveAssemblyReference.cache
