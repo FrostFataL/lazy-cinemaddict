@@ -41,9 +41,6 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Ninject">
-      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
-    </Reference>
     <Reference Include="PresentationFramework.Aero" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -64,32 +61,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Models\IFilmInfoRepository.cs" />
-    <Compile Include="Services\NinjectModule.cs" />
-    <Compile Include="Views\AllFilmsList.xaml.cs">
-      <DependentUpon>AllFilmsList.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Services\DefaultSaver.cs" />
+    <Compile Include="DefaultSaver.cs" />
     <Compile Include="Film.cs" />
-    <Compile Include="Models\FilmInfoRepository.cs" />
-    <Compile Include="ViewModels\FilmInfoViewModel.cs" />
-    <Compile Include="Services\ISaver.cs" />
-    <Compile Include="ViewModels\ListViewModel.cs" />
-    <Compile Include="ViewModels\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
-    <Compile Include="Views\MainWindow.xaml.cs">
+    <Compile Include="FilmInfoRepository.cs" />
+    <Compile Include="FilmInfoViewModel.cs" />
+    <Compile Include="ISaver.cs" />
+    <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sample4.xaml.cs">
       <DependentUpon>Sample4.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Services\JsonSaver.cs" />
-    <Compile Include="ViewModels\NotifyBase.cs" />
-    <Page Include="Views\AllFilmsList.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\FilmEditorWindow.xaml">
+    <Compile Include="JsonSaver.cs" />
+    <Page Include="FilmEditorWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -97,20 +81,16 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Models\FilmInfo.cs" />
-    <Compile Include="Views\FilmEditorWindow.xaml.cs">
+    <Compile Include="FilmInfo.cs" />
+    <Compile Include="FilmEditorWindow.xaml.cs">
       <DependentUpon>FilmEditorWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Views\MainWindow.xaml">
+    <Page Include="MainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Sample4.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\MainWindowStyles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

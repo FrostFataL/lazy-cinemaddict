@@ -25,7 +25,7 @@ namespace LazyCinemaddict
 
         public FilmEditorWindow()
         {
-            FilmInfo = new FilmInfoViewModel() { WindowTitle = "Добавить фильм" };
+            FilmInfo = new FilmInfoViewModel() { WindowTitle = "Add new film" };
             InitializeComponent();
         }
 
@@ -38,7 +38,7 @@ namespace LazyCinemaddict
                 Date = film.Date,
                 Genre = film.Genre,
                 Duration = film.Duration,
-                WindowTitle = "Редактировать фильм"
+                WindowTitle = "Update film"
             };
 
             InitializeComponent();

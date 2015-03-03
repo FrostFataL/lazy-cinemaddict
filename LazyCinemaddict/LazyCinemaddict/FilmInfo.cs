@@ -12,10 +12,9 @@ namespace LazyCinemaddict
     {
         public Guid Id { get; private set; }
         public string Title { get; set; }
-        public DateTime? Date { get; set; }
+        public DateTime Date { get; set; }
         public string Genre { get; set; }
-        public int? Duration { get; set; }
-        public string ImageUrl { get; set; }
+        public int Duration { get; set; }
 
         public FilmInfo()
         {

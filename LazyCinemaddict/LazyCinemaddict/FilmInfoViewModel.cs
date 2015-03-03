@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LazyCinemaddict.ViewModels
+namespace LazyCinemaddict
 {
-    public class ViewModelBase : NotifyBase
+    public class FilmInfoViewModel : INotifyPropertyChanged
     {
         Guid id;
         public Guid Id
@@ -18,7 +19,7 @@ namespace LazyCinemaddict.ViewModels
             set
             {
                 id = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Id");
             }
         }
 
@@ -32,7 +33,7 @@ namespace LazyCinemaddict.ViewModels
             set
             {
                 windowTitle = value;
-                OnPropertyChanged();
+                OnPropertyChanged("WindowTitle");
             }
         }
 
@@ -46,12 +47,12 @@ namespace LazyCinemaddict.ViewModels
             set
             {
                 filmTitle = value;
-                OnPropertyChanged();
+                OnPropertyChanged("FilmTitle");
             }
         }
 
-        DateTime? date;
-        public DateTime? Date
+        DateTime date;
+        public DateTime Date
         {
             get
             {
@@ -60,7 +61,7 @@ namespace LazyCinemaddict.ViewModels
             set
             {
                 date = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Date");
             }
         }
 
@@ -74,12 +75,12 @@ namespace LazyCinemaddict.ViewModels
             set
             {
                 genre = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Genre");
             }
         }
 
-        int? duration;
-        public int? Duration
+        int duration;
+        public int Duration
         {
             get
             {
@@ -88,35 +89,16 @@ namespace LazyCinemaddict.ViewModels
             set
             {
                 duration = value;
-                OnPropertyChanged();
+                OnPropertyChanged("Duration");
             }
         }
 
-        string imageUrl;
-        public string ImageUrl
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void OnPropertyChanged(String info)
         {
-            get
+            if (PropertyChanged != null)
             {
-                return imageUrl;
-            }
-            set
-            {
-                imageUrl = value;
-                OnPropertyChanged();
-            }
-        }
-
-        int filmsCount;
-        public int FilmsCount
-        {
-            get
-            {
-                return filmsCount;
-            }
-            set
-            {
-                filmsCount = value;
-                OnPropertyChanged();
+                PropertyChanged(this, new PropertyChangedEventArgs(info));
             }
         }
     }
