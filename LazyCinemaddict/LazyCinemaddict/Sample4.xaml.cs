@@ -21,6 +21,8 @@ namespace LazyCinemaddict
     {
         public ObservableCollection<Film> Films { get; set; }
 
+        public Film CurrentFilm { get; set; }
+
         private string _filter;
         public string Filter
         {
@@ -61,6 +63,12 @@ namespace LazyCinemaddict
                 new Film { Director = "Mike", Name = "Friends 2", Time = "1.30", Year = "2015", ImagePath = new Uri(@"D:\2.jpg")}
             };
             InitializeComponent();
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //MessageBox.Show(CurrentFilm.Name);
+            this.Close();
         }
     }
 }

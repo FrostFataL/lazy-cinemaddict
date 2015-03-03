@@ -6,24 +6,20 @@ using System.Threading.Tasks;
 
 namespace LazyCinemaddict
 {
-    public class FilmInfoRepository
+    public class FilmInfoRepository : LazyCinemaddict.Models.IFilmInfoRepository
     {
         List<FilmInfo> _films;
         ISaver _saver;
-        public ISaver Saver 
-        {
-            get 
-            {
-                if (_saver == null)
-                    _saver = new DefaultSaver();
-                return _saver;
-            }
 
-            set
-            {
-                _saver = value;
-                _films = _saver.Load() ?? new List<FilmInfo>();
-            }
+        public FilmInfoRepository(ISaver saver)
+        {
+            _saver = saver;
+            _films = saver.Load() ?? new List<FilmInfo>();
+        }
+
+        public int GetFilmsCount()
+        {
+            return _films.Count;
         }
 
         public void Add(FilmInfo film)
@@ -48,8 +44,13 @@ namespace LazyCinemaddict
 
         public FilmInfo GetRandom()
         {
-            int rand = new Random().Next(_films.Count - 1);
+            int rand = new Random().Next(_films.Count);
             return _films[rand];
+        }
+
+        public FilmInfo GetCurrent(Guid id)
+        {
+            return _films.Single(s => s.Id == id);
         }
 
         public void Remove(FilmInfo film)
