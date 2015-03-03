@@ -1,13 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LazyCinemaddict
+namespace LazyCinemaddict.ViewModels
 {
-    public class FilmInfoViewModel : INotifyPropertyChanged
+    public class ViewModelBase : NotifyBase
     {
         Guid id;
         public Guid Id
@@ -19,7 +18,7 @@ namespace LazyCinemaddict
             set
             {
                 id = value;
-                OnPropertyChanged("Id");
+                OnPropertyChanged();
             }
         }
 
@@ -33,7 +32,7 @@ namespace LazyCinemaddict
             set
             {
                 windowTitle = value;
-                OnPropertyChanged("WindowTitle");
+                OnPropertyChanged();
             }
         }
 
@@ -47,12 +46,12 @@ namespace LazyCinemaddict
             set
             {
                 filmTitle = value;
-                OnPropertyChanged("FilmTitle");
+                OnPropertyChanged();
             }
         }
 
-        DateTime date;
-        public DateTime Date
+        DateTime? date;
+        public DateTime? Date
         {
             get
             {
@@ -61,7 +60,7 @@ namespace LazyCinemaddict
             set
             {
                 date = value;
-                OnPropertyChanged("Date");
+                OnPropertyChanged();
             }
         }
 
@@ -75,12 +74,12 @@ namespace LazyCinemaddict
             set
             {
                 genre = value;
-                OnPropertyChanged("Genre");
+                OnPropertyChanged();
             }
         }
 
-        int duration;
-        public int Duration
+        int? duration;
+        public int? Duration
         {
             get
             {
@@ -89,16 +88,35 @@ namespace LazyCinemaddict
             set
             {
                 duration = value;
-                OnPropertyChanged("Duration");
+                OnPropertyChanged();
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void OnPropertyChanged(String info)
+        string imageUrl;
+        public string ImageUrl
         {
-            if (PropertyChanged != null)
+            get
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
+                return imageUrl;
+            }
+            set
+            {
+                imageUrl = value;
+                OnPropertyChanged();
+            }
+        }
+
+        int filmsCount;
+        public int FilmsCount
+        {
+            get
+            {
+                return filmsCount;
+            }
+            set
+            {
+                filmsCount = value;
+                OnPropertyChanged();
             }
         }
     }

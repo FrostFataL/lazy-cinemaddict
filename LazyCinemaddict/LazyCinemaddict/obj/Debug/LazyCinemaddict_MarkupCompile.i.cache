@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\
+E:\Coding\lazy-cinemaddict-develop\LazyCinemaddict\LazyCinemaddict\obj\Debug\
 LazyCinemaddict
 none
 false
 DEBUG;TRACE
-H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\App.xaml
-3617618253
+E:\Coding\lazy-cinemaddict-develop\LazyCinemaddict\LazyCinemaddict\App.xaml
+5-48298152
 
-18-1063960659
-14-1564122633
-FilmEditorWindow.xaml;MainWindow.xaml;Sample4.xaml;
+252022300462
+15-325839375
+Views\AllFilmsList.xaml;Views\FilmEditorWindow.xaml;Views\MainWindow.xaml;Sample4.xaml;Themes\MainWindowStyles.xaml;
 
 False
 

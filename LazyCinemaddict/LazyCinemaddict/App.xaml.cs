@@ -1,4 +1,7 @@
-﻿using System;
+﻿using LazyCinemaddict.Services;
+using LazyCinemaddict.ViewModels;
+using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;

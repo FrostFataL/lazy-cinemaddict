@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace LazyCinemaddict
 
         public FilmEditorWindow()
         {
-            FilmInfo = new FilmInfoViewModel() { WindowTitle = "Add new film" };
+            FilmInfo = new FilmInfoViewModel() { WindowTitle = "Добавить фильм" };
             InitializeComponent();
         }
 
@@ -38,7 +39,7 @@ namespace LazyCinemaddict
                 Date = film.Date,
                 Genre = film.Genre,
                 Duration = film.Duration,
-                WindowTitle = "Update film"
+                WindowTitle = "Редактировать фильм"
             };
 
             InitializeComponent();
@@ -48,6 +49,12 @@ namespace LazyCinemaddict
         {
             DialogResult = true;
             this.Close();
+        }
+
+        private void ImageBrowseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog image = new OpenFileDialog();
+            image.Filter = "";
         }
     }
 }

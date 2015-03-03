@@ -1,7 +1,7 @@
 ﻿<Window x:Name="WMD" x:Class="LazyCinemaddict.FilmEditorWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Lazy Cinemaddict" Height="320" Width="370"
+        Title="Lazy Cinemaddict" Height="340" Width="370"
         WindowStartupLocation="CenterOwner" ResizeMode="NoResize" WindowStyle="None"
         AllowsTransparency="True" Background="Transparent">
     <Window.Resources>
@@ -10,8 +10,6 @@
             <Setter Property="Foreground" Value="White" />
             <Setter Property="FontSize" Value="15" />
             <Setter Property="SnapsToDevicePixels" Value="True" />
-            <!--<Setter Property="BorderThickness" Value="1"/>
-            <Setter Property="BorderBrush" Value="White"/>-->
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
@@ -72,22 +70,26 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="2*"></ColumnDefinition>
                 <ColumnDefinition Width="3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBlock Style="{StaticResource Title}" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SketchFlow Print" FontSize="24" Foreground="#FF292323" FontWeight="Bold" Text="{Binding FilmInfo.WindowTitle}"></TextBlock>
-            <Button x:Name="Cancel" Grid.Column="1" Grid.Row="5" Content="Cancel" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="30,5" IsCancel="True" Height="20"/>
-            <Button x:Name="Test_btn" Grid.Column="0" Grid.Row="5" Content="OK" Margin="20,5" HorizontalAlignment="Stretch" Click="Test_btn_Click" IsDefault="True" VerticalAlignment="Top" Height="20"/>
-            <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource Label_Style}">Title</TextBlock>
+            <Button x:Name="Cancel" Grid.Column="1" Grid.Row="6" Content="Cancel" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="30,5" IsCancel="True" Height="20"/>
+            <Button x:Name="Test_btn" Grid.Column="0" Grid.Row="6" Content="OK" Margin="20,5" HorizontalAlignment="Stretch" Click="Test_btn_Click" IsDefault="True" VerticalAlignment="Top" Height="20"/>
+            <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource Label_Style}">Название</TextBlock>
             <TextBox x:Name="Titletxt" Grid.Column="1" Grid.Row="1" Text="{Binding FilmInfo.FilmTitle}"/>
-            <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource Label_Style}">Date</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource Label_Style}">Дата</TextBlock>
             <DatePicker x:Name="Datetxt" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Text="{Binding FilmInfo.Date}" HorizontalContentAlignment="Stretch" Margin="15,0" VerticalContentAlignment="Center" FontFamily="Lucida Console" FontSize="14"/>
-            <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource Label_Style}">Genre</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource Label_Style}">Жанр</TextBlock>
             <TextBox x:Name="Genretxt" Grid.Column="1" Grid.Row="3" Text="{Binding FilmInfo.Genre}"/>
-            <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource Label_Style}">Duration</TextBlock>
+            <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource Label_Style}">Время</TextBlock>
             <TextBox x:Name="Durationtxt" Grid.Column="1" Grid.Row="4" Text="{Binding FilmInfo.Duration}"/>
+            <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource Label_Style}">Картинка</TextBlock>
+            <TextBox x:Name="ImageUrltxt" Grid.Column="1" Grid.Row="5" Text="{Binding FilmInfo.ImageUrl}" Margin="15,0,60,0"/>
+            <Button x:Name="ImageBrowseBtn" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" Content="Browse" Margin="5,10" Click="ImageBrowseBtn_Click"/>
         </Grid>
     </Border>
 </Window>
