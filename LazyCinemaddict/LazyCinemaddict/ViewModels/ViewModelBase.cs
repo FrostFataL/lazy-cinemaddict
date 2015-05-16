@@ -106,6 +106,20 @@ namespace LazyCinemaddict.ViewModels
             }
         }
 
+        string imagePath;
+        public string ImagePath
+        {
+            get
+            {
+                return imagePath;
+            }
+            set
+            {
+                imagePath = value;
+                OnPropertyChanged();
+            }
+        }
+
         int filmsCount;
         public int FilmsCount
         {

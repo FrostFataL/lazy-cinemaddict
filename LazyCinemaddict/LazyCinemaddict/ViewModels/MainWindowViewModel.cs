@@ -33,6 +33,9 @@ namespace LazyCinemaddict.ViewModels
             Genre = filmInfo.Genre;
             Duration = filmInfo.Duration;
             Date = filmInfo.Date;
+
+            ImageUrl = filmInfo.ImageUrl; //
+            ImagePath = filmInfo.ImagePath; //
         }
 
         public FilmInfo GetCurrent()
@@ -52,6 +55,9 @@ namespace LazyCinemaddict.ViewModels
             Genre = film.Genre;
             Duration = film.Duration;
             Date = film.Date;
+
+            ImageUrl = film.ImageUrl; //
+            ImagePath = film.ImagePath; //
         }
 
         public void Save()
@@ -71,6 +77,7 @@ namespace LazyCinemaddict.ViewModels
             Genre = null;
             Duration = null;
             Date = null;
+            ImagePath = null;
             FilmsCount--;
         }
     }

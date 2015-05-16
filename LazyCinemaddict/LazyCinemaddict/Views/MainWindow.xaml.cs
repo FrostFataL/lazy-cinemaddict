@@ -54,6 +54,9 @@ namespace LazyCinemaddict
                     currentFilm.Date = film.FilmInfo.Date;
                     currentFilm.Genre = film.FilmInfo.Genre;
                     currentFilm.Duration = film.FilmInfo.Duration;
+
+                    currentFilm.ImageUrl = film.FilmInfo.ImageUrl; //
+                    currentFilm.ImagePath = System.IO.Directory.GetCurrentDirectory() + "\\Images\\" + film.FilmInfo.ImagePath; //
                 }
                 viewModel.Update(currentFilm);
             }
@@ -74,7 +77,10 @@ namespace LazyCinemaddict
                     Genre = film.FilmInfo.Genre,
                     Date = film.FilmInfo.Date,
                     Duration = film.FilmInfo.Duration,
-                    Title = film.FilmInfo.FilmTitle
+                    Title = film.FilmInfo.FilmTitle,
+
+                    ImageUrl = film.FilmInfo.ImageUrl, //
+                    ImagePath = System.IO.Directory.GetCurrentDirectory() + "\\Images\\" + film.FilmInfo.ImagePath //
                 });
             }
         }
@@ -108,6 +114,9 @@ namespace LazyCinemaddict
                 viewModel.Id = lstModel.CurrentFilm.Id;
                 viewModel.Genre = lstModel.CurrentFilm.Genre;
                 viewModel.Duration = lstModel.CurrentFilm.Duration;
+
+                viewModel.ImagePath = lstModel.CurrentFilm.ImagePath; //
+                viewModel.ImageUrl = lstModel.CurrentFilm.ImageUrl; //
             }
         }
     }

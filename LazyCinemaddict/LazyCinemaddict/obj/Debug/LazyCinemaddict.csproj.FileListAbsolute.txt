@@ -65,3 +65,5 @@ E:\Coding\lazy-cinemaddict-develop\LazyCinemaddict\LazyCinemaddict\obj\Debug\Laz
 E:\Coding\lazy-cinemaddict-develop\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemaddict.Properties.Resources.resources
 E:\Coding\lazy-cinemaddict-develop\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemaddict.csproj.GenerateResource.Cache
 E:\Coding\lazy-cinemaddict-develop\LazyCinemaddict\LazyCinemaddict\obj\Debug\LazyCinemaddict.csprojResolveAssemblyReference.cache
+H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\Views\Helper.baml
+H:\GitHub\lazy-cinemaddict\LazyCinemaddict\LazyCinemaddict\obj\Debug\Views\Helper.g.cs
