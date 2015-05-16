@@ -77,8 +77,8 @@
                 <ColumnDefinition Width="3*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <TextBlock Style="{StaticResource Title}" Grid.ColumnSpan="2" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="SketchFlow Print" FontSize="24" Foreground="#FF292323" FontWeight="Bold" Text="{Binding FilmInfo.WindowTitle}"></TextBlock>
-            <Button x:Name="Cancel" Grid.Column="1" Grid.Row="6" Content="Cancel" VerticalAlignment="Top" VerticalContentAlignment="Center" Margin="30,5" IsCancel="True" Height="20"/>
-            <Button x:Name="Test_btn" Grid.Column="0" Grid.Row="6" Content="OK" Margin="20,5" HorizontalAlignment="Stretch" Click="Test_btn_Click" IsDefault="True" VerticalAlignment="Top" Height="20"/>
+            <Button x:Name="Cancel" Grid.Column="1" Grid.Row="6" Content="Cancel" VerticalAlignment="Center" VerticalContentAlignment="Center" Margin="30,5" IsCancel="True" Height="20"/>
+            <Button x:Name="Test_btn" Grid.Column="0" Grid.Row="6" Content="OK" Margin="20,5" HorizontalAlignment="Stretch" Click="Test_btn_Click" IsDefault="True" VerticalAlignment="Center" Height="20"/>
             <TextBlock Grid.Column="0" Grid.Row="1" Style="{StaticResource Label_Style}">Название</TextBlock>
             <TextBox x:Name="Titletxt" Grid.Column="1" Grid.Row="1" Text="{Binding FilmInfo.FilmTitle}"/>
             <TextBlock Grid.Column="0" Grid.Row="2" Style="{StaticResource Label_Style}">Дата</TextBlock>
@@ -90,6 +90,7 @@
             <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource Label_Style}">Картинка</TextBlock>
             <TextBox x:Name="ImageUrltxt" Grid.Column="1" Grid.Row="5" Text="{Binding FilmInfo.ImageUrl}" Margin="15,0,60,0"/>
             <Button x:Name="ImageBrowseBtn" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" Content="Browse" Margin="5,10" Click="ImageBrowseBtn_Click"/>
+            <ProgressBar x:Name="DownloadProgressBar" Grid.Row="6" Grid.ColumnSpan="2" Height="6" VerticalAlignment="Top"/>
         </Grid>
     </Border>
 </Window>

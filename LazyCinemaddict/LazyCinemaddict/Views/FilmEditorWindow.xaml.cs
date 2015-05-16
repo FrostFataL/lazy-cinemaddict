@@ -55,17 +55,16 @@ namespace LazyCinemaddict
 
         private void Test_btn_Click(object sender, RoutedEventArgs e)
         {
-            //helper = new Helper();
-            //helper.Owner = this;
-            if( ImageUrltxt.Text != oldImageUrl && ImageUrltxt.Text != "")
+            //if( ImageUrltxt.Text != oldImageUrl && ImageUrltxt.Text != "")
                 SaveImage(ImageUrltxt.Text);
-            //helper.Close();
+            
             DialogResult = true;
             this.Close();
         }
 
         private void ImageBrowseBtn_Click(object sender, RoutedEventArgs e)
         {
+            SaveImage(ImageUrltxt.Text);
             //OpenFileDialog image = new OpenFileDialog();
             //image.Filter = "";
             //SaveImage();
@@ -89,8 +88,8 @@ namespace LazyCinemaddict
                 //Helper helper = new Helper();
                 //helper.Visibility = System.Windows.Visibility.Visible;
                 //helper.Owner = this;
-                helper.ProgressBar.Value = e.ProgressPercentage;
-                helper.Percent.Text = "" + e.ProgressPercentage + "";
+                DownloadProgressBar.Value = e.ProgressPercentage;
+                //Percent.Text = "" + e.ProgressPercentage + "";
             //helper.Close();
         }
 
